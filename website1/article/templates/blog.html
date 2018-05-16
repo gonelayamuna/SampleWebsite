@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+	<table class="table table-striped">
+		<tr>
+			<th>Blog title</th>
+			<th>Author name</th>
+			<th>Date of publishing</th>
+		</tr>
+	{% for i in blog %}
+		<tr>
+			<td class="abc">{{i.title}}</td>			
+			<td><img src="{% static 'b1.png' %}" alt="Some logo"></td>
+			<td>{{i.date}}</td>
+		</tr>
+	{% endfor %}
+{% endblock %}
+
